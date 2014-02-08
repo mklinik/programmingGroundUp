@@ -9,7 +9,7 @@
 .section .data
 
 data_items:
- .long 1,21,2,3,25
+ .long 1,21,2,3,256,25,30,0
 
 .section .text
 .globl _start
