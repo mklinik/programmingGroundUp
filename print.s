@@ -19,7 +19,7 @@ strlen_loop:
 strlen_end: # edx now holds the string length
 
  movl $4, %eax # syscall: write
- movl $1, %ebx # file handle: stdout
+ movl $1, %ebx # file handle: 1 = stdout
  movl $hello, %ecx # buffer start
  int $0x80 # syscall
 
