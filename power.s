@@ -45,7 +45,7 @@ power_loop:
     movq 16(%rbp), %rbx # fetch local variable to %rbx
     imulq %rax, %rbx # multiply, store result in %rbx
     movq %rbx, 16(%rbp) # store result to local variable
-    dec   %rdi
+    decq   %rdi
     jmp   power_loop
 
     # function cleanup, return value is in %rax
