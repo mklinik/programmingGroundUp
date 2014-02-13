@@ -1,4 +1,6 @@
 DIRECTORIES = bin _build
+# --gstabs tells the assembler to include debugging information
+ASFLAGS=--gstabs
 
 .PHONY: clean test
 
@@ -6,7 +8,7 @@ test:
 	@echo $(DIRECTORIES)
 
 _build/%.o: %.s $(DIRECTORIES)
-	as $< -o $@
+	as $(ASFLAGS) $< -o $@
 
 bin/%: _build/%.o $(DIRECTORIES)
 	ld $< -o $@
